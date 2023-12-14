@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 export const Notices = () => {
   const { notices, deleteNotice } = useContext(NoticeContext);
   const { push } = useRouter();
-  console.log(notices);
   const handleDelete = async (_id: string) => {
     deleteNotice(_id);
   };

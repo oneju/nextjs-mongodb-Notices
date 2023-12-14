@@ -2,8 +2,6 @@ import { Mongoose, connect } from "mongoose";
 
 const { DB_URL, DB_NAME } = process.env;
 
-console.log(DB_URL, DB_NAME);
-
 if (!DB_URL) {
   throw new Error("DB_URL must be defined");
 }
