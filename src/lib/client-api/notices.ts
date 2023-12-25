@@ -3,7 +3,7 @@ import { NoticeResponse, NoticesResponse } from "@/types/Notices";
 const NOTICE_END_POINT = `${process.env.NEXT_PUBLIC_BASE_URL}/api/notices`;
 
 const getNotices = async (): Promise<NoticesResponse> => {
-  const res = await fetch(NOTICE_END_POINT);
+  const res = await fetch(NOTICE_END_POINT, { method: "GET" });
   const { data } = await res.json();
 
   return data;
